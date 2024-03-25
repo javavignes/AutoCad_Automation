@@ -1,0 +1,21 @@
+Sub Test()
+
+MsgBox "Hello Vignesh"
+
+' Gets and displays the caption of the application window
+MsgBox ThisDrawing.Application.Caption
+
+' Zooms to the extents of all drawing objects in the current viewport
+AcadApplication.Application.ZoomExtents
+
+' Maximizes the application window
+ThisDrawing.Application.WindowState = acMax
+
+MsgBox "Name: " & ThisDrawing.Application.Name & vbLf & _
+ "Path: " & ThisDrawing.Application.Path & vbLf & _
+ "FullName : " & ThisDrawing.Application.FullName & vbLf & _
+ "Version : " & ThisDrawing.Application.Version, _
+ vbInformation, "Application Info"
+
+
+End Sub
